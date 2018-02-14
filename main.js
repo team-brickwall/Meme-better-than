@@ -4,8 +4,7 @@ const getMeme = $.ajax({
     dataType: 'json',
     data: {
     key: 'jihEvId9hSK8jUUi9YsQTViLnVmDpDYS',
-        format: 'json',
-        q: "cheesburgers"
+        format: 'json'
     }
 });
 
