@@ -1,3 +1,4 @@
+
 // create empty object that will hold all functions
 const memeApp = {}
 
@@ -38,6 +39,8 @@ memeApp.getQuote = () => {
 
 memeApp.displayGif = (memeImage) => {
     $('.memeContainer').attr('src', memeImage);
+}
+
 };
 
 memeApp.displayQuote = (displayQuote) => {

@@ -2,6 +2,13 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+//BODY STYLES
+.wrapper {
+    margin: 0 auto;
+    max-width: 1080px;
+}
+
+//MEME STYLES
 .meme {
     width: 500px;
     height: 500px;
@@ -21,3 +28,32 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
     left: 40px;
     z-index: 10;
 }
+
+//TITLE 
+.authorTitle {
+    width: 100%;
+    h2 {
+        text-align: center;
+        margin: 0;
+        padding-top: 50px;
+    }
+}
+
+//USER INPUT
+
+.userInput {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.options {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .input, .quoteAPI {
+        width: 45%;
+    }
+}
+

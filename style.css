@@ -132,6 +132,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+.wrapper {
+  margin: 0 auto;
+  max-width: 1080px; }
+
 .meme {
   width: 500px;
   height: 500px;
@@ -151,3 +155,34 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   top: 40px;
   left: 40px;
   z-index: 10; }
+
+.authorTitle {
+  width: 100%; }
+  .authorTitle h2 {
+    text-align: center;
+    margin: 0;
+    padding-top: 50px; }
+
+.userInput {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.options {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .options .input, .options .quoteAPI {
+    width: 45%; }
