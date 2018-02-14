@@ -1,34 +1,65 @@
-const getMeme = $.ajax({
-    url: 'https://api.giphy.com/v1/gifs/random',
-    method: 'GET',
-    dataType: 'json',
-    data: {
-    key: 'jihEvId9hSK8jUUi9YsQTViLnVmDpDYS',
-        format: 'json',
-        q: "cheesburgers"
-    }
-});
+// create empty object that will hold all functions
+const memeApp = {}
 
-const getQuote = $.ajax({
-    url: 'https://favqs.com/api/qotd',
-    method: 'GET',
-    dataType: 'json'
-});
 
-$.when(getQuote)
-    .then((quote) => {
-    displayQuote(quote.quote.body);
-});
+// create function that will get both quote and giphy data using AJAX
 
-const displayQuote = (displayQuote) => {
-    $('h1').text(displayQuote);
-}
-
-$.when(getMeme)
-    .then((meme1) => {
-    displayMeme(meme1.data.image_url);
+memeApp.getGif = (query) => {
+    $.ajax({
+        url: 'https://api.giphy.com/v1/gifs/random',
+        method: 'GET',
+        dataType: 'json',
+        data: {
+            key: 'jihEvId9hSK8jUUi9YsQTViLnVmDpDYS',
+                format: 'json',
+                q: 'cheeseburger',
+            }
+}).then((gif1) => {
+    memeApp.displayGif(gif1.data.image_url);
 })
-
-const displayMeme = (memeImage) => {
-    $('.memeContainer').attr('src', memeImage);
 }
+
+memeApp.getQuote = () => {
+    $.ajax({
+        url: 'https://favqs.com/api/qotd',
+        method: 'GET',
+        dataType: 'json'
+    }).then((quote) => {
+        memeApp.displayQuote(quote.quote.body);
+
+    })
+}
+
+
+// create functions that will display AJAX data:
+// 1) display gif on page load
+// 2) display quote.author on page load
+// 3) "display" quote.body on page load (except on page load we will .text("") empty string)
+
+memeApp.displayGif = (memeImage) => {
+    $('.memeContainer').attr('src', memeImage);
+};
+
+memeApp.displayQuote = (displayQuote) => {
+    $('h3').text(displayQuote);
+};
+
+// create function that will handle our event listeners:
+// 1) jquery smoothscroll plugin for header button
+// 2) on submit (ie "generate"), display user text in left box, displays quote.body in right box
+// 3) on reset, clear user input, pull new AJAX data, empty two containers
+
+
+
+
+//create function that launches app on page load
+memeApp.init = () => {
+    memeApp.getGif();
+    memeApp.getQuote();
+}
+
+// create the document ready
+$(function(){
+    memeApp.init();
+});
+
