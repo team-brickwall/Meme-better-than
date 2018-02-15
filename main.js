@@ -18,6 +18,7 @@ memeApp.getGif = (query) => {
 }).then((gif1) => {
     memeApp.displayGif(gif1.data.image_url);
 })
+}
 
 memeApp.getQuote = () => {
     $.ajax({
@@ -52,7 +53,7 @@ memeApp.displayQuote = (displayQuote) => {
 memeApp.events = () => {
 
 // smooth scroll
-    $('.scroll').on('click',function(){
+    $('.button').on('click',function(){
         $('html').animate({
             scrollTop: $('.authorTitle').offset().top}, 'slow'
         );
@@ -78,5 +79,10 @@ memeApp.init = () => {
 // create the document ready
 $(function(){
     memeApp.init();
+    //TYPE JS
+    var typed = new Typed('.element', {
+        strings: ["First sentence.", "Second sentence."],
+        typeSpeed: 30
+    });
 });
 

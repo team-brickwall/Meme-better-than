@@ -145,6 +145,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   clip: rect(0 0 0);
   overflow: hidden; }
 
+.body {
+  font-family: 'Special Elite', Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace; }
+
 .wrapper {
   margin: 0 auto;
   max-width: 1080px; }
@@ -177,18 +180,40 @@ h1 {
   font-family: "Special Elite";
   color: #ff0;
   font-size: 40px;
-  text-align: center; }
+  text-align: center;
+  -ms-flex-item-align: center;
+  align-self: center; }
 
-.button {
+.mainHeading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-line-pack: center;
+  align-content: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
 
+.socialMedia {
+  position: absolute;
+  top: 20px;
+  right: 0; }
+
 header {
-  height: 100vh; }
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
   header button {
     color: #fff;
     background-color: #eb6e80;
