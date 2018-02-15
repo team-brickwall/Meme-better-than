@@ -41,7 +41,6 @@ memeApp.displayGif = (memeImage) => {
     $('.memeContainer').attr('src', memeImage);
 }
 
-};
 
 memeApp.displayQuote = (displayQuote) => {
     $('h3').text(displayQuote);
@@ -51,8 +50,24 @@ memeApp.displayQuote = (displayQuote) => {
 // 1) jquery smoothscroll plugin for header button
 // 2) on submit (ie "generate"), display user text in left box, displays quote.body in right box
 // 3) on reset, clear user input, pull new AJAX data, empty two containers
+memeApp.events = () => {
+
+// smooth scroll
+    $('.scroll').on('click',function(){
+        $('html').animate({
+            scrollTop: $('.authorTitle').offset().top}, 'slow'
+        );
+    });
+
+// display text in boxes .on generate
+    $('.userInput').on('submit',function(){
+        $('.input').html('<h4>${.userInput.input}</h4>');
+        console.log('hi there');
+        $('.quoteAPI').text('<h4>displayQuote</h4>');
+    });
 
 
+}
 
 
 //create function that launches app on page load
