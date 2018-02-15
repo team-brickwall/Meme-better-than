@@ -46,16 +46,29 @@ h1 {
     color: #ff0;
     font-size: 40px;
     text-align: center;
-
+    align-self: center;
 }
 
-// .button {
-//     display: flex;
-//     justify-content: center;
-// }
+.mainHeading {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.socialMedia {
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
 
 header{
     height: 100vh;
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
     button {
         color: #fff;
         background-color: #eb6e80;
