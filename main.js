@@ -25,9 +25,11 @@ memeApp.getQuote = () => {
         url: 'https://favqs.com/api/qotd',
         method: 'GET',
         dataType: 'json'
-    }).then((quote) => {
+    }).then((quote, author) => {
         memeApp.displayQuote(quote.quote.body);
-
+        console.log('log1');
+        memeApp.displayAuthor(quote.quote.author);
+        console.log('log2');
     })
 }
 
@@ -41,10 +43,13 @@ memeApp.displayGif = (memeImage) => {
     $('.memeContainer').attr('src', memeImage);
 }
 
-
 memeApp.displayQuote = (displayQuote) => {
-    $('h3').text(displayQuote);
+    $('.quoteAPI h3').text(displayQuote);
 };
+
+memeApp.displayAuthor = (displayAuthor) => {
+    $('h2').text(`Can you Meme better than ${displayAuthor}`);
+}
 
 // create function that will handle our event listeners:
 // 1) jquery smoothscroll plugin for header button
@@ -57,15 +62,23 @@ memeApp.events = () => {
         $('html').animate({
             scrollTop: $('.authorTitle').offset().top}, 'slow'
         );
+        $('.quoteAPI').hide();
     });
 
 // display text in boxes .on generate
-    $('.userInput').on('submit',function(){
-        $('.input').html('<h4>${.userInput.input}</h4>');
-        console.log('hi there');
-        $('.quoteAPI').text('<h4>displayQuote</h4>');
+    $('form').on('submit',function(e){
+        e.preventDefault();
+        console.log('ryan calls coffeeeee time.');
+        let answer = $('input[name=answer]').val();
+        console.log(answer);
+        $('.quoteUser').append(`<h3>${answer}</h3>`);
+        $('.quoteAPI').show();
+        $('.generate').hide();
     });
 
+    $('form').on('reset',function(r){
+        $('.generate').show();
+    })
 
 }
 
@@ -74,6 +87,7 @@ memeApp.events = () => {
 memeApp.init = () => {
     memeApp.getGif();
     memeApp.getQuote();
+    memeApp.events();
 }
 
 // create the document ready
