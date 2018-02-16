@@ -184,6 +184,14 @@ h1 {
   -ms-flex-item-align: center;
   align-self: center; }
 
+h2 {
+  font-family: "Special Elite";
+  color: #ff0;
+  text-align: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  font-size: 25px; }
+
 .mainHeading {
   display: -webkit-box;
   display: -ms-flexbox;
