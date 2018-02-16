@@ -48,21 +48,34 @@ memeApp.displayQuote = (displayQuote) => {
 };
 
 memeApp.displayAuthor = (displayAuthor) => {
-    $('h2').text(`Can you Meme better than ${displayAuthor}`);
+    $('h2').text(`Can you Meme better than ${displayAuthor} ?`);
 }
 
 // create function that will handle our event listeners:
 // 1) jquery smoothscroll plugin for header button
 // 2) on submit (ie "generate"), display user text in left box, displays quote.body in right box
 // 3) on reset, clear user input, pull new AJAX data, empty two containers
+<<<<<<< HEAD
 memeApp.events = () => {
 
 // smooth scroll
+=======
+memeApp.events = (displayAuthor) => {
+    // smooth scroll
+>>>>>>> a2aeb8de65487543093a53428ecc693a5ca72f20
     $('.scroll').on('click',function(){
         $('html').animate({
             scrollTop: $('.authorTitle').offset().top + 30}, 'slow'
         );
+<<<<<<< HEAD
         $('.quoteAPI').addClass('hidden');
+=======
+        $('.quoteAPI').hide();
+        let typeInstance = new TypeIt('#typeAuthor', {
+            strings: "Can you meme better than " + displayAuthor + "?",
+            lifelike: true
+        })
+>>>>>>> a2aeb8de65487543093a53428ecc693a5ca72f20
     });
 
 // display text in boxes .on generate
@@ -83,21 +96,24 @@ memeApp.events = () => {
 
 }
 
+//Create a function to use type JS
+memeApp.headerType = () => {
+    let typeInstance = new TypeIt('#typeHeader', {
+        strings: "Can you meme better than . . .",
+        lifelike: true
+    })
+}
 
 //create function that launches app on page load
 memeApp.init = () => {
     memeApp.getGif();
     memeApp.getQuote();
     memeApp.events();
+    memeApp.headerType();
 }
 
 // create the document ready
 $(function(){
     memeApp.init();
-    //TYPE JS
-    var typed = new Typed('.element', {
-        strings: ["First sentence.", "Second sentence."],
-        typeSpeed: 30
-    });
-});
+}); 
 
