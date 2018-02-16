@@ -18,7 +18,7 @@ memeApp.getGif = (query) => {
 }).then((gif1) => {
     memeApp.displayGif(gif1.data.image_url);
 })
-}
+}      
 
 memeApp.getQuote = () => {
     $.ajax({
