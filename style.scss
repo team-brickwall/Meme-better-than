@@ -4,23 +4,33 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 .visuallyhidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
+
+
 //BODY STYLES
-.body {
-    font-family: 'Special Elite', Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
-    
+
+* {
+    margin: 0;
+    padding: 0;
 }
+body {
+    font-family: 'Special Elite', Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
+    background-color: #a5e5e7;
+}
+
+// papaya e24e24
+// mustard e9b000 
+// aqua 008f95 
+// blush eb6e80
 
 .wrapper {
     margin: 0 auto;
     max-width: 1080px;
-}
-
-body {
-    background-color: #008f95;
+    width: 90%;
 }
 
 //FONT AWESOME STYLES
 ul {
+    margin-top: 20px;
     padding-left: 0;
     display: flex;
     justify-content: flex-end;
@@ -47,6 +57,7 @@ h1 {
     font-size: 40px;
     text-align: center;
     align-self: center;
+    margin: 25px 0;
 }
 
 .mainHeading {
@@ -63,12 +74,16 @@ h1 {
     right: 0;
 }
 
-header{
-    height: 100vh;
+.headerContainer {
     position: relative;
     display: flex;
     align-content: center;
     justify-content: center;
+    height: 100vh;
+}
+
+header{
+    height: 100vh;
     button {
         color: #fff;
         background-color: #eb6e80;
@@ -87,26 +102,18 @@ header{
     }
 }
 
+//USER INPUT
 
-//MEME STYLES
-.meme {
-    width: 500px;
-    height: 500px;
-    margin: 0 auto;
-    padding: 50px;
-    overflow: hidden;
-}
-.meme img {
-    position: relative;
-    height: 100%;
+.userInput {
     width: 100%;
-    object-fit: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 25px auto;
 }
-.meme h1 {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    z-index: 10;
+
+input[type="text"] {
+    max-width: 50%;
 }
 
 //TITLE 
@@ -119,21 +126,106 @@ header{
     }
 }
 
-//USER INPUT
+//MEME STYLES
 
-.userInput {
-    width: 100%;
+.meme {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
 }
 
-.options {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    .input, .quoteAPI {
-        width: 45%;
+.memeContainer {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid red;
+    .quoteUser {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        z-index: 10;
     }
 }
 
+.memeContainer2{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    .quoteAPI {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        z-index: 10;
+    }
+}
+
+.memeContainer img,
+.memeContainer2 img {
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hidden {
+    display: none;
+}
+
+//REVEALED API & USER QUOTES NAMES
+
+.attribution {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .userName, .quoteAuthor {
+        max-width: calc(50% - 30px);
+        margin: 100px 15px;
+        // border: 1px solid red;
+    }
+}
+
+
+
+/* MEDIA QUERIES */
+
+/* Portrait tablet and small desktops */
+
+@media (max-width: 940px) {
+
+}
+
+/* Landscape phone to portrait tablet */
+
+@media (max-width: 767px) {
+    .meme {
+        padding: 25px;
+    }
+}
+
+// breakpoint for image
+@media (max-width: 550px) {
+    .meme {
+        width: 400px;
+        height: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* Portrait phones and down */
+
+@media (max-width: 480px) {
+   
+    h2 {
+        font-size: 16px;
+    }
+
+    .options {
+        .input,
+        .quoteAPI {
+            max-width: calc(50% - 30px);
+            margin: 0 25px;
+        }
+    }
+}

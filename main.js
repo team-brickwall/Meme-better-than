@@ -40,7 +40,7 @@ memeApp.getQuote = () => {
 // 3) "display" quote.body on page load (except on page load we will .text("") empty string)
 
 memeApp.displayGif = (memeImage) => {
-    $('.memeContainer').attr('src', memeImage);
+    $('.memeImage').attr('src', memeImage);
 }
 
 memeApp.displayQuote = (displayQuote) => {
@@ -58,11 +58,11 @@ memeApp.displayAuthor = (displayAuthor) => {
 memeApp.events = () => {
 
 // smooth scroll
-    $('.button').on('click',function(){
+    $('.scroll').on('click',function(){
         $('html').animate({
-            scrollTop: $('.authorTitle').offset().top}, 'slow'
+            scrollTop: $('.authorTitle').offset().top + 30}, 'slow'
         );
-        $('.quoteAPI').hide();
+        $('.quoteAPI').addClass('hidden');
     });
 
 // display text in boxes .on generate
@@ -72,8 +72,9 @@ memeApp.events = () => {
         let answer = $('input[name=answer]').val();
         console.log(answer);
         $('.quoteUser').append(`<h3>${answer}</h3>`);
-        $('.quoteAPI').show();
+        $('.quoteAPI').removeClass('hidden');
         $('.generate').hide();
+        $('.memeContainer2').removeClass('hidden');
     });
 
     $('form').on('reset',function(r){

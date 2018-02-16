@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="wrapper">
-        <header> 
+    <header> 
+        <div class="headerContainer wrapper">
             <div class="socialMedia">
                 <nav>
                     <ul>
@@ -36,34 +36,41 @@
                 </nav>
             </div>
             <div class="mainHeading">
-                <h1>Can you Meme better than</h1>
+                <h1>Can you Meme better than . . .</h1>
                 <button class="scroll">Do you even Meme?</button>                
             </div>
-        </header>
-        <main>
+        </div>    
+    </header>
+        <main class="wrapper">
             <div class="authorTitle">
                 <h2>Can you meme better than</h2>
             </div>
+            <form class="userInput" action="">
+                <input type="text" name="answer" placeholder="Type title here!">
+                <input class="generate" name="submit" type="submit" value="Generate">
+                <button class="reset" type="reset">Reset</button>
+            </form>
             <div class="meme">
-                <img class="memeContainer" src="" alt="">
+                <div class="memeContainer">
+                    <div class="quoteUser"></div>
+                    <img class="memeImage" src="" alt="">
+                </div>
+                <div class="memeContainer2 hidden">
+                    <div class="quoteAPI">
+                        <h3></h3>
+                    </div>
+                    <img class="memeImage" src="" alt="">
+                </div>
             </div>
-            <div class="options">
-                <section class="quoteUser"></section>
-                <section class="quoteAPI"><h3></h3></section>
-            </div>
-            <div class="userInput">
-                <form action="">
-                    <input type="text" name="answer" placeholder="Type title here!">
-                    <input class="generate" name="submit" type="submit" value="Generate">
-                    <button class="reset" type="reset">Reset</button>
-                </form>
+            <div class="attribution">
+                <div class="userName"><h3>-you</h3></div>
+                <div class="quoteAuthor"><h3>-Author Name</h3></div>
             </div>
         </main>
-    </div>
-    ''
     <script src="https://use.fontawesome.com/9537b616cc.js"></script>
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
     crossorigin='anonymous'></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@5.5.0/dist/typeit.min.js"></script>
     <script src="main.js"></script>
 
 </body>
