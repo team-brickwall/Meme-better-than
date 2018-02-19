@@ -80,7 +80,7 @@ $('.scroll').on('click',function(){
         console.log('ryan calls coffeeeee time.');
         let answer = $('input[name=answer]').val();
         console.log(answer);
-        $('.quoteUser').append(`<h3>${answer}</h3>`);
+        $('.quoteUser h3').text(`${answer}`);
         $('.quoteAPI').removeClass('hidden');
         $('.generate').hide();
         $('.memeContainer2').removeClass('hidden');
