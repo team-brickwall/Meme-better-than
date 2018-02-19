@@ -34,13 +34,10 @@
                         </li>
                     </ul>
                 </nav>
-            </div>
-
+            </div>             
             <div class="mainHeading">
-
                 <h1 id="typeHeader"></h1>
                 <button class="scroll">Do you even Meme?</button>      
-
             </div>
         </div>    
     </header>
@@ -49,13 +46,13 @@
                 <h2 id="typeAuthor"></h2>
             </div>
             <form class="userInput" action="">
-                <input type="text" name="answer" placeholder="Type title here!">
-                <input class="generate" name="submit" type="submit" value="Generate">
-                <button class="reset" type="reset">Reset</button>
+                <input id="userTitle" type="text" name="answer" placeholder="Type title here!">
+                <input class="generate userButtons" name="submit" type="submit" value="Generate">
+                <button class="reset userButtons" type="reset">Reset</button>
             </form>
             <div class="meme">
                 <div class="memeContainer">
-                    <div class="quoteUser"></div>
+                    <div class="quoteUser"><h3></h3></div>
                     <img class="memeImage" src="" alt="">
                 </div>
                 <div class="memeContainer2 hidden">
@@ -66,8 +63,8 @@
                 </div>
             </div>
             <div class="attribution">
-                <div class="userName"><h3>-you</h3></div>
-                <div class="quoteAuthor"><h3>-Author Name</h3></div>
+                <div class="userName"><h3>-You</h3></div>
+                <div class="quoteAuthor"><h3>-Author</h3></div>
             </div>
         </main>
 

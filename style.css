@@ -151,7 +151,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 body {
   font-family: 'Special Elite', Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
-  background-color: #a5e5e7; }
+  background-color: #4ae8ee; }
 
 .wrapper {
   margin: 0 auto;
@@ -247,6 +247,23 @@ header {
       -webkit-box-shadow: 3px 3px 10px #ff0;
       box-shadow: 3px 3px 10px #ff0; }
 
+.userButtons {
+  color: #fff;
+  background-color: #eb6e80;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  border-style: none;
+  text-align: center;
+  margin: 0 10px;
+  -webkit-transition: 1s ease-in all;
+  -o-transition: 1s ease-in all;
+  transition: 1s ease-in all;
+  border-radius: 3px; }
+  .userButtons:hover {
+    color: #ff0;
+    -webkit-box-shadow: 3px 3px 10px #ff0;
+    box-shadow: 3px 3px 10px #ff0; }
+
 .userInput {
   width: 100%;
   display: -webkit-box;
@@ -261,8 +278,12 @@ header {
   justify-content: center;
   margin: 25px auto; }
 
+#userTitle {
+  width: 45%; }
+
 input[type="text"] {
-  max-width: 50%; }
+  max-width: 50%;
+  margin: 0 5px; }
 
 .authorTitle {
   width: 100%; }
@@ -274,15 +295,15 @@ input[type="text"] {
 .meme {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  width: 100%; }
 
 .memeContainer {
   position: relative;
   width: 400px;
   height: 400px;
   margin: 0 auto;
-  overflow: hidden;
-  border: 1px solid red; }
+  overflow: hidden; }
   .memeContainer .quoteUser {
     position: absolute;
     top: 40px;
@@ -311,6 +332,12 @@ input[type="text"] {
 
 .hidden {
   display: none; }
+
+.meme h3 {
+  font-family: "League Gothic";
+  text-align: center;
+  font-size: 40px;
+  -webkit-text-stroke: 1px white; }
 
 .attribution {
   width: 100%;
