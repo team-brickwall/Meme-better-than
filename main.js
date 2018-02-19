@@ -55,46 +55,23 @@ memeApp.displayAuthor = (displayAuthor) => {
 // 1) jquery smoothscroll plugin for header button
 // 2) on submit (ie "generate"), display user text in left box, displays quote.body in right box
 // 3) on reset, clear user input, pull new AJAX data, empty two containers
-<<<<<<< HEAD
-<<<<<<< HEAD
-memeApp.events = () => {
 
-// smooth scroll
-=======
 memeApp.events = (displayAuthor) => {
     // smooth scroll
->>>>>>> a2aeb8de65487543093a53428ecc693a5ca72f20
+
     $('.scroll').on('click',function(){
         $('html').animate({
             scrollTop: $('.authorTitle').offset().top + 30}, 'slow'
         );
-<<<<<<< HEAD
-        $('.quoteAPI').addClass('hidden');
-=======
-        $('.quoteAPI').hide();
-=======
-
-memeApp.events = (displayAuthor) => {
-    // smooth scroll
-
-$('.scroll').on('click',function(){
-        $('html').animate({
-            scrollTop: $('.authorTitle').offset().top + 30}, 'slow'
-        );
 
         $('.quoteAPI').addClass('hidden');
 
-     
->>>>>>> 0bc71d8363459efebdd6c84254dc039be0d75db0
+
         let typeInstance = new TypeIt('#typeAuthor', {
             strings: "Can you meme better than " + displayAuthor + "?",
             lifelike: true
         })
-<<<<<<< HEAD
->>>>>>> a2aeb8de65487543093a53428ecc693a5ca72f20
-=======
 
->>>>>>> 0bc71d8363459efebdd6c84254dc039be0d75db0
     });
 
 // display text in boxes .on generate
