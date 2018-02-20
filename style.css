@@ -151,7 +151,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 body {
   font-family: 'Special Elite', Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
-  background-color: #4ae8ee; }
+  background-color: #008f95; }
 
 .wrapper {
   margin: 0 auto;
@@ -182,7 +182,7 @@ ul {
 
 h1 {
   font-family: "Special Elite";
-  color: #ff0;
+  color: white;
   font-size: 40px;
   text-align: center;
   -ms-flex-item-align: center;
@@ -191,7 +191,7 @@ h1 {
 
 h2 {
   font-family: "Special Elite";
-  color: #ff0;
+  color: white;
   text-align: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -233,7 +233,7 @@ header {
   header button {
     color: #fff;
     background-color: #eb6e80;
-    padding: 10px 30px;
+    padding: 14px 30px 10px;
     text-transform: uppercase;
     border-style: none;
     text-align: center;
@@ -247,10 +247,25 @@ header {
       -webkit-box-shadow: 3px 3px 10px #ff0;
       box-shadow: 3px 3px 10px #ff0; }
 
+.userInput {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 25px auto; }
+
 .userButtons {
   color: #fff;
   background-color: #eb6e80;
-  padding: 10px 30px;
+  padding: 14px 30px 10px;
   text-transform: uppercase;
   border-style: none;
   text-align: center;
@@ -264,26 +279,15 @@ header {
     -webkit-box-shadow: 3px 3px 10px #ff0;
     box-shadow: 3px 3px 10px #ff0; }
 
-.userInput {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 25px auto; }
-
-#userTitle {
-  width: 45%; }
-
 input[type="text"] {
-  max-width: 50%;
-  margin: 0 5px; }
+  margin: 5px 10px 15px;
+  padding: 8px; }
+
+input[id="userTitle"] {
+  width: 50%; }
+
+input[id="userName"] {
+  width: 35%; }
 
 .authorTitle {
   width: 100%; }
@@ -306,8 +310,8 @@ input[type="text"] {
   overflow: hidden; }
   .memeContainer .quoteUser {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 0;
+    left: 0;
     z-index: 10; }
 
 .memeContainer2 {
@@ -318,8 +322,8 @@ input[type="text"] {
   overflow: hidden; }
   .memeContainer2 .quoteAPI {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 0;
+    left: 0;
     z-index: 10; }
 
 .memeContainer img,
@@ -334,41 +338,85 @@ input[type="text"] {
   display: none; }
 
 .meme h3 {
-  font-family: "League Gothic";
+  font-family: 'Oswald',sans-serif;
+  font-weight: 700;
+  width: 400px;
+  text-transform: uppercase;
+  color: white;
   text-align: center;
   font-size: 40px;
-  -webkit-text-stroke: 1px white; }
+  -webkit-text-stroke: 2px black;
+  line-height: 1.26;
+  letter-spacing: -3px; }
 
-.attribution {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
-  .attribution .userName, .attribution .quoteAuthor {
-    max-width: calc(50% - 30px);
-    margin: 100px 15px; }
+.human,
+.machine {
+  margin: 0 auto 100px; }
+
+.userName,
+.quoteAuthor {
+  margin-top: 15px;
+  width: 400px; }
+  .userName p,
+  .quoteAuthor p {
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 24px;
+    color: white; }
 
 /* MEDIA QUERIES */
 /* Portrait tablet and small desktops */
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
-  .meme {
-    padding: 25px; } }
+@media (max-width: 900px) {
+  .memeContainer,
+  .memeContainer2 {
+    width: 350px;
+    height: 350px;
+    margin: 0 auto; }
+  .meme h3 {
+    width: 350px;
+    font-size: 35px; }
+  .userName,
+  .quoteAuthor {
+    width: 350px; } }
 
-@media (max-width: 550px) {
+/* Landscape phone to portrait tablet and breakpoint*/
+@media (max-width: 787px) {
+  .userInput {
+    width: 80%; }
   .meme {
-    width: 400px;
-    height: 400px;
-    margin: 0 auto; } }
+    padding: 10px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .memeContainer,
+  .memeContainer2 {
+    width: 300px;
+    height: 300px;
+    margin: 10px auto; }
+  .meme h3 {
+    width: 300px;
+    font-size: 30px; }
+  .userName,
+  .quoteAuthor {
+    width: 300px; }
+    .userName p,
+    .quoteAuthor p {
+      font-size: 18px; } }
 
-/* Portrait phones and down */
-@media (max-width: 480px) {
-  h2 {
-    font-size: 16px; }
-  .options .input,
-  .options .quoteAPI {
-    max-width: calc(50% - 30px);
-    margin: 0 25px; } }
+/* Portrait phones and down, breakpoint allows to 480px*/
+@media (max-width: 710px) {
+  .authorTitle h2 {
+    font-size: 24px; }
+  .userInput {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%; }
+  input[id="userTitle"] {
+    width: 90%; }
+  input[id="userName"] {
+    width: 90%; }
+  .human {
+    margin: 0 auto 20px; }
+  .machine {
+    margin: 0 auto 100px; } }

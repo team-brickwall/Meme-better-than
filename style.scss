@@ -14,7 +14,8 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 }
 body {
     font-family: 'Special Elite', Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
-    background-color: #4ae8ee;
+    // background-color: #4ae8ee;
+    background-color: #008f95;
 }
 
 // papaya e24e24
@@ -53,7 +54,8 @@ ul {
 //MAIN TITLE
 h1 {
     font-family: "Special Elite";
-    color: #ff0;
+    // color: #ff0;
+    color: white;
     font-size: 40px;
     text-align: center;
     align-self: center;
@@ -62,7 +64,8 @@ h1 {
 
 h2 {
     font-family: "Special Elite";
-    color: #ff0;
+    // color: #ff0;
+    color: white;
     text-align: center;
     align-self: center;
     font-size: 25px;
@@ -95,7 +98,7 @@ header{
     button {
         color: #fff;
         background-color: #eb6e80;
-        padding: 10px 30px;
+        padding: 14px 30px 10px;
         text-transform: uppercase;
         border-style: none;
         text-align: center;
@@ -110,10 +113,27 @@ header{
     }
 }
 
- .userButtons {
+//USER INPUT
+
+// .userInputButtons,
+// .userInput {
+//     display: flex;
+// }
+
+
+.userInput {
+    width: 60%;
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto;
+}
+.userButtons {
         color: #fff;
         background-color: #eb6e80;
-        padding: 10px 30px;
+        padding: 14px 30px 10px;
         text-transform: uppercase;
         border-style: none;
         text-align: center;
@@ -123,27 +143,25 @@ header{
         &:hover {
             color: #ff0;
             box-shadow: 3px 3px 10px #ff0;
-
         }
     }
 
-//USER INPUT
-
-.userInput {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 25px auto;
-}
-
-#userTitle {
-    width: 45%;
-}
+// #userTitle,
+// #userName {
+//     width: 45%;
+// }
 
 input[type="text"] {
-    max-width: 50%;
-    margin: 0 5px;
+    margin: 5px 10px 15px;
+    padding: 8px;
+}
+
+input[id="userTitle"] {
+    width: 50%;
+}
+
+input[id="userName"] {
+    width: 35%;
 }
 
 //TITLE 
@@ -171,8 +189,8 @@ input[type="text"] {
     overflow: hidden;
     .quoteUser {
         position: absolute;
-        top: 40px;
-        left: 40px;
+        top: 0;
+        left: 0;
         z-index: 10;
     }
 }
@@ -185,8 +203,8 @@ input[type="text"] {
     overflow: hidden;
     .quoteAPI {
         position: absolute;
-        top: 40px;
-        left: 40px;
+        top: 0;
+        left: 0;
         z-index: 10;
     }
 }
@@ -204,24 +222,56 @@ input[type="text"] {
 }
 
 .meme h3 {
-    font-family: "League Gothic";
+    // font-family: "League Gothic";
+    font-family: 'Oswald',sans-serif;
+    font-weight: 700;
+    width: 400px;
+    text-transform: uppercase;
+    color: white;
     text-align: center;
     font-size: 40px;
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 2px black;
+    line-height: 1.26;
+    letter-spacing: -3px;
+
+}    
+
+.human,
+.machine {
+    margin: 0 auto 100px;
 }
+
+.userName,
+.quoteAuthor{
+    margin-top: 15px;
+    width: 400px;
+    p {
+        text-transform: uppercase;
+        text-align: right; 
+        font-size: 24px;
+        color: white;
+    }  
+} 
+
 
 //REVEALED API & USER QUOTES NAMES
 
-.attribution {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    .userName, .quoteAuthor {
-        max-width: calc(50% - 30px);
-        margin: 100px 15px;
-        // border: 1px solid red;
-    }
-}
+// .attribution {
+//     width: 100%;
+//     display: flex;
+//     justify-content: space-around;
+//     margin: 10px 0 100px;
+//     .userName,
+//     .quoteAuthor{
+//         width: 400px;
+//         p {
+//             text-transform: uppercase;
+//             text-align: right; 
+//             font-size: 24px;
+//             color: white;
+//         }  
+//     } 
+// }
 
 
 
@@ -233,36 +283,87 @@ input[type="text"] {
 
 }
 
-/* Landscape phone to portrait tablet */
-
-@media (max-width: 767px) {
-    .meme {
-        padding: 25px;
-    }
-}
-
 // breakpoint for image
-@media (max-width: 550px) {
-    .meme {
-        width: 400px;
-        height: 400px;
+@media (max-width: 900px) {
+    .memeContainer,
+    .memeContainer2 {
+        width: 350px;
+        height: 350px;
         margin: 0 auto;
     }
-}
 
-/* Portrait phones and down */
-
-@media (max-width: 480px) {
-   
-    h2 {
-        font-size: 16px;
+    .meme h3 {
+        width: 350px;
+        font-size: 35px;
+    }
+    .userName,
+    .quoteAuthor {
+        width: 350px;
     }
 
-    .options {
-        .input,
-        .quoteAPI {
-            max-width: calc(50% - 30px);
-            margin: 0 25px;
+}
+/* Landscape phone to portrait tablet and breakpoint*/
+
+@media (max-width: 787px) {
+
+    .userInput {
+        width: 80%;
+    }
+
+    .meme {
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    .memeContainer,
+    .memeContainer2 {
+        width: 300px;
+        height: 300px;
+        margin: 10px auto;
+    }
+
+    .meme h3 {
+        width: 300px;
+        font-size: 30px;
+    }
+    
+    .userName,
+    .quoteAuthor {
+        width: 300px;
+        p {
+            font-size: 18px;
         }
+    }
+
+}
+
+
+/* Portrait phones and down, breakpoint allows to 480px*/
+
+@media (max-width: 710px) {
+
+    .authorTitle h2 {
+        font-size: 24px;
+    }
+
+    .userInput {
+        flex-direction: column;
+        width: 100%
+    }
+
+    input[id="userTitle"] {
+        width: 90%;
+    }
+
+    input[id="userName"] {
+        width: 90%;
+    }
+
+    .human {
+        margin: 0 auto 20px;
+    }
+
+    .machine {
+        margin: 0 auto 100px;
     }
 }

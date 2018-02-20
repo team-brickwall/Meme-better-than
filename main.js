@@ -48,7 +48,8 @@ memeApp.displayQuote = (displayQuote) => {
 };
 
 memeApp.displayAuthor = (displayAuthor) => {
-    $('h2').text(`Can you Meme better than ${displayAuthor} ?`);
+    $('h2').text(`Can you meme better than ${displayAuthor} ?`);
+    $('.quoteAuthor p').text(`\u2014 ${displayAuthor}`);
 }
 
 // create function that will handle our event listeners:
@@ -65,13 +66,13 @@ memeApp.events = (displayAuthor) => {
         );
 
         $('.quoteAPI').addClass('hidden');
-
+        $('.quoteAuthor').addClass('hidden');
+        $('.userName').addClass('hidden');
 
         let typeInstance = new TypeIt('#typeAuthor', {
             strings: "Can you meme better than " + displayAuthor + "?",
             lifelike: true
         })
-
     });
 
 // display text in boxes .on generate
@@ -80,15 +81,56 @@ memeApp.events = (displayAuthor) => {
         console.log('ryan calls coffeeeee time.');
         let answer = $('input[name=answer]').val();
         console.log(answer);
+        let memer = $('input[name=name').val();
+        console.log(memer);
         $('.quoteUser h3').text(`${answer}`);
+        $('.userName p').text(`\u2014 ${memer}`);
         $('.quoteAPI').removeClass('hidden');
         $('.generate').hide();
+        $('#userName').hide();
+        $('#userTitle').hide();
+        $('.machine').removeClass('hidden');
         $('.memeContainer2').removeClass('hidden');
+        $('.quoteAuthor').removeClass('hidden');
+        $('.userName').removeClass('hidden');
+        $('.reset').removeClass('hidden');
     });
 
+//reset inputs
     $('form').on('reset',function(r){
         $('.generate').show();
+        $('#userName').show();
+        $('#userTitle').show();
+        $('html').animate({
+            scrollTop: $('header').offset().top + 30
+        }, 'slow');
+        memeApp.getGif();
+        memeApp.getQuote();
+        memeApp.headerType();
+        $('.memeContainer2').addClass('hidden');
+        $('.machine').addClass('hidden');
+        $('.quoteAuthor').addClass('hidden');
+        $('.userName').addClass('hidden');
+        $('.reset').addClass('hidden');
+        $('.quoteUser h3').text(``);
     })
+
+//reload page
+    // $('.newMeme').on('click',function(){
+    //     $('html').animate({
+    //         scrollTop: $('header').offset().top + 30
+    //     }, 'slow');
+    //     memeApp.getGif();
+    //     memeApp.getQuote();
+    //     memeApp.headerType();
+    //     $('.generate').show();
+    //     $('#userName').show();
+    //     $('#userTitle').show();
+    //     $('.memeContainer2').addClass('hidden');
+    //     $('.quoteAuthor').addClass('hidden');
+    //     $('.userName').addClass('hidden');
+        
+    // })
 
 }
 

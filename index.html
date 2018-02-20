@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Oswald:600,700" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -45,12 +46,13 @@
             <div class="authorTitle">
                 <h2 id="typeAuthor"></h2>
             </div>
-            <form class="userInput" action="">
-                <input id="userTitle" type="text" name="answer" placeholder="Type title here!">
+            <form class="userInput" action="" name="memeForm">
+                <input id="userTitle" type="text" name="answer" placeholder="Add your caption here!">
+                <input id="userName" type="text" name="name" placeholder="Enter your name">
                 <input class="generate userButtons" name="submit" type="submit" value="Generate">
-                <button class="reset userButtons" type="reset">Reset</button>
+                <button class="reset userButtons hidden" type="reset" name="memeForm">Can I has new gif?</button>
             </form>
-            <div class="meme">
+            <!-- <div class="meme">
                 <div class="memeContainer">
                     <div class="quoteUser"><h3></h3></div>
                     <img class="memeImage" src="" alt="">
@@ -63,8 +65,26 @@
                 </div>
             </div>
             <div class="attribution">
-                <div class="userName"><h3>-You</h3></div>
-                <div class="quoteAuthor"><h3>-Author</h3></div>
+                <div class="userName"><p>--You</p></div>
+                <div class="quoteAuthor"><p>--Author</p></div>
+            </div> -->
+            <div class="meme">
+                <div class="human">
+                    <div class="memeContainer">
+                        <div class="quoteUser"><h3></h3></div>
+                        <img class="memeImage" src="" alt="">
+                    </div>
+                    <div class="userName"><p>--You</p></div>
+                </div>
+                <div class="machine hidden">
+                    <div class="memeContainer2 hidden">
+                        <div class="quoteAPI">
+                            <h3></h3>
+                        </div>
+                        <img class="memeImage" src="" alt="">
+                    </div>
+                    <div class="quoteAuthor"><p>--Author</p></div>
+                </div>
             </div>
         </main>
 
