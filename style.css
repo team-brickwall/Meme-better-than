@@ -332,7 +332,7 @@ input[id="userName"] {
     z-index: 10; }
 
 .memeSection {
-  height: 85vh;
+  height: 100vh;
   position: relative; }
 
 .memesection#reset {
@@ -446,7 +446,7 @@ input[id="userName"] {
   .human {
     margin: 0 auto 20px; }
   .machine {
-    margin: 0 auto 100px; } }
+    margin: 0 auto 20px; } }
 
 .hidden {
   display: none; }
