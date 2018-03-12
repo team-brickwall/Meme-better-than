@@ -376,8 +376,20 @@ input[id="userName"] {
     font-size: 24px;
     color: white; }
 
-footer {
-  padding: 30px 0; }
+.socialMedia2 {
+  text-align: center;
+  width: 100%;
+  padding: 10px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.copyright {
+  text-align: center;
+  padding: 10px 0; }
 
 /* MEDIA QUERIES */
 /* Portrait tablet and small desktops */
@@ -435,22 +447,6 @@ footer {
     margin: 0 auto 20px; }
   .machine {
     margin: 0 auto 100px; } }
-
-footer {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  footer .socialMedia2 {
-    text-align: right; }
-  footer .copyright {
-    text-align: center; }
 
 .hidden {
   display: none; }
