@@ -57,7 +57,7 @@ memeApp.displayAuthor = (displayAuthor) => {
 // 2) on submit (ie "generate"), display user text in left box, displays quote.body in right box
 // 3) on reset, clear user input, pull new AJAX data, empty two containers
 
-memeApp.events = (displayAuthor) => {
+memeApp.events = () => {
     // smooth scroll
 
     $('.scroll').on('click',function(){
@@ -113,25 +113,8 @@ memeApp.events = (displayAuthor) => {
         $('.userName').addClass('hidden');
         $('.reset').addClass('hidden');
         $('.quoteUser h3').text(``);
+        location.reload(true)
     })
-
-//reload page
-    // $('.newMeme').on('click',function(){
-    //     $('html').animate({
-    //         scrollTop: $('header').offset().top + 30
-    //     }, 'slow');
-    //     memeApp.getGif();
-    //     memeApp.getQuote();
-    //     memeApp.headerType();
-    //     $('.generate').show();
-    //     $('#userName').show();
-    //     $('#userTitle').show();
-    //     $('.memeContainer2').addClass('hidden');
-    //     $('.quoteAuthor').addClass('hidden');
-    //     $('.userName').addClass('hidden');
-        
-    // })
-
 }
 
 //Create a function to use type JS
@@ -152,6 +135,8 @@ memeApp.init = () => {
 
 // create the document ready
 $(function(){
-    memeApp.init();
+    memeApp.init(); 
+    $('.mainHeading h3.hidden, button.scroll').fadeIn(5000);
+    $('.mainHeading h3.hidden, button.scroll').removeClass('hidden');
 }); 
 

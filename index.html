@@ -4,89 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Meme better than</title>
     <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Oswald:600,700" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header> 
-        <div class="headerContainer wrapper">
-            <div class="socialMedia">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="">
-                            <i class="fa fa-twitter"></i>
-                            <span class="visuallyhidden">Twitter</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                            <i class="fa fa-facebook"></i>
-                            <span class="visuallyhidden">Facebook</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                            <i class="fa fa-instagram"></i>
-                            <span class="visuallyhidden">Instagram</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>             
+        <div class="headerContainer wrapper">            
+            <nav class="socialMedia">
+                <ul>
+                    <li>
+                        <a href="https://twitter.com/home?status=Do%20you%20have%20what%20it%20takes%20to%20meme?" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                        <span class="visuallyhidden">Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com" target="_blank"> 
+                        <i class="fa fa-instagram"></i>
+                        <span class="visuallyhidden">Instagram</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>            
             <div class="mainHeading">
                 <h1 id="typeHeader"></h1>
-                <button class="scroll">Do you even Meme?</button>      
+                <h3 class="hidden">a randomly generated quote?</h3>
+                <button class="scroll hidden">Let's Find Out!</button>      
             </div>
         </div>    
     </header>
         <main class="wrapper">
-            <div class="authorTitle">
-                <h2 id="typeAuthor"></h2>
-            </div>
-            <form class="userInput" action="" name="memeForm">
-                <input id="userTitle" type="text" name="answer" placeholder="Add your caption here!">
-                <input id="userName" type="text" name="name" placeholder="Enter your name">
-                <input class="generate userButtons" name="submit" type="submit" value="Generate">
-                <button class="reset userButtons hidden" type="reset" name="memeForm">Can I has new gif?</button>
-            </form>
-            <!-- <div class="meme">
-                <div class="memeContainer">
-                    <div class="quoteUser"><h3></h3></div>
-                    <img class="memeImage" src="" alt="">
+            <div class="memeSection">
+                <div class="authorTitle">
+                    <h2 id="typeAuthor"></h2>
                 </div>
-                <div class="memeContainer2 hidden">
-                    <div class="quoteAPI">
-                        <h3></h3>
-                    </div>
-                    <img class="memeImage" src="" alt="">
-                </div>
-            </div>
-            <div class="attribution">
-                <div class="userName"><p>--You</p></div>
-                <div class="quoteAuthor"><p>--Author</p></div>
-            </div> -->
-            <div class="meme">
-                <div class="human">
-                    <div class="memeContainer">
-                        <div class="quoteUser"><h3></h3></div>
-                        <img class="memeImage" src="" alt="">
-                    </div>
-                    <div class="userName"><p>--You</p></div>
-                </div>
-                <div class="machine hidden">
-                    <div class="memeContainer2 hidden">
-                        <div class="quoteAPI">
-                            <h3></h3>
+                <form class="userInput" action="" name="memeForm">
+                    <input id="userTitle" type="text" name="answer" placeholder="Add your caption here!">
+                    <input id="userName" type="text" name="name" placeholder="Enter your name">
+                    <input class="generate userButtons" name="submit" type="submit" value="Generate">
+                    <!-- <button class="reset userButtons hidden" type="reset" name="memeForm">Can I has new gif?</button> -->
+                </form>
+                <div class="meme">
+                    <div class="human">
+                        <div class="memeContainer">
+                            <div class="quoteUser"><h3></h3></div>
+                            <img class="memeImage" src="" alt="">
                         </div>
-                        <img class="memeImage" src="" alt="">
+                        <div class="userName"><p></p></div>
                     </div>
-                    <div class="quoteAuthor"><p>--Author</p></div>
+                    <div class="machine hidden">
+                        <div class="memeContainer2 hidden">
+                            <div class="quoteAPI">
+                                <h3></h3>
+                            </div>
+                            <img class="memeImage" src="" alt="">
+                        </div>
+                        <div class="quoteAuthor"><p></p></div>
+                    </div>
                 </div>
+                <form action="" class="userInput">
+                    <button class="reset userButtons hidden" type="reset" id="reset" name="memeForm">Can I has new gif?</button>
+                </form>
             </div>
         </main>
+        <footer>
+            <div class="wrapper">
+                <nav class="socialMedia2">
+                    <ul>
+                        <li>
+                            <a href="https://twitter.com/home?status=Do%20you%20have%20what%20it%20takes%20to%20meme?" target="_blank">
+                                <i class="fa fa-twitter"></i>
+                                <span class="visuallyhidden">Twitter</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com" target="_blank">
+                                <i class="fa fa-instagram"></i>
+                                <span class="visuallyhidden">Instagram</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="copyright">
+                    <p>&copy; Natalie Van Dine and Jordan Guy 2018</p>
+                </div>       
+            </div>
+        </footer>
 
     <script src="https://use.fontawesome.com/9537b616cc.js"></script>
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
