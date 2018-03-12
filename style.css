@@ -197,6 +197,11 @@ h2 {
   align-self: center;
   font-size: 25px; }
 
+h3 {
+  text-align: center;
+  color: #fff;
+  padding-bottom: 25px; }
+
 .mainHeading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -326,6 +331,13 @@ input[id="userName"] {
     left: 0;
     z-index: 10; }
 
+.memeSection {
+  height: 85vh;
+  position: relative; }
+
+.memesection#reset {
+  bottom: 10px; }
+
 .memeContainer img,
 .memeContainer2 img {
   margin: 0 auto;
@@ -351,7 +363,7 @@ input[id="userName"] {
 
 .human,
 .machine {
-  margin: 0 auto 100px; }
+  margin: 0 auto 25px; }
 
 .userName,
 .quoteAuthor {
@@ -363,6 +375,9 @@ input[id="userName"] {
     text-align: right;
     font-size: 24px;
     color: white; }
+
+footer {
+  padding: 30px 0; }
 
 /* MEDIA QUERIES */
 /* Portrait tablet and small desktops */
@@ -420,3 +435,22 @@ input[id="userName"] {
     margin: 0 auto 20px; }
   .machine {
     margin: 0 auto 100px; } }
+
+footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  footer .socialMedia2 {
+    text-align: right; }
+  footer .copyright {
+    text-align: center; }
+
+.hidden {
+  display: none; }
